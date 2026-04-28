@@ -83,7 +83,8 @@
     "closes": "23:00"
   }],
   "sameAs": [
-    "https://wa.me/905300975110"
+    "https://wa.me/905300975110",
+    "https://www.instagram.com/malatya.masaj.salonu"
   ],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
@@ -187,6 +188,8 @@
   --cream-deep: #e8dcc4;
   --bronze: #b08a5b;
   --bronze-deep: #8a6940;
+  --call-blue: #1e6fbf;
+  --call-blue-deep: #155a9c;
   --ink: #1c2420;
   --whisper: #8c9088;
   --line: rgba(58, 74, 63, 0.12);
@@ -287,16 +290,17 @@ img { max-width: 100%; display: block; }
   align-items: center;
   gap: 8px;
   padding: 11px 22px;
-  background: var(--sage);
-  color: var(--cream) !important;
+  background: var(--call-blue);
+  color: white !important;
   border-radius: 999px;
   font-size: 13px !important;
   letter-spacing: 0.06em !important;
   text-transform: uppercase;
   font-weight: 500;
   transition: all 0.3s;
+  box-shadow: 0 4px 14px rgba(30, 111, 191, 0.25);
 }
-.nav-cta:hover { background: var(--sage-deep); transform: translateY(-1px); color: var(--cream-deep) !important; }
+.nav-cta:hover { background: var(--call-blue-deep); transform: translateY(-1px); color: white !important; box-shadow: 0 6px 18px rgba(30, 111, 191, 0.35); }
 .burger {
   display: none;
   background: none;
@@ -423,14 +427,14 @@ img { max-width: 100%; display: block; }
   overflow: hidden;
 }
 .btn-primary {
-  background: var(--sage-deep);
-  color: var(--cream);
-  box-shadow: var(--shadow-md);
+  background: var(--call-blue);
+  color: white;
+  box-shadow: 0 6px 20px rgba(30, 111, 191, 0.3);
 }
 .btn-primary:hover {
-  background: var(--ink);
+  background: var(--call-blue-deep);
   transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 10px 28px rgba(30, 111, 191, 0.4);
 }
 .btn-whatsapp {
   background: #25D366;
@@ -721,6 +725,9 @@ section { padding: 110px 0; position: relative; }
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
 }
 .service:hover {
   transform: translateY(-6px);
@@ -800,15 +807,15 @@ section { padding: 110px 0; position: relative; }
   letter-spacing: 0.04em;
 }
 .service-meta .more {
-  color: var(--bronze-deep);
-  font-weight: 500;
+  color: var(--call-blue);
+  font-weight: 600;
   letter-spacing: 0.04em;
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  transition: gap 0.3s;
+  transition: gap 0.3s, color 0.3s;
 }
-.service:hover .more { gap: 12px; }
+.service:hover .more { gap: 12px; color: var(--call-blue-deep); }
 
 /* ============ LOCATIONS - BATTALGAZI & YESILYURT ============ */
 .locations {
@@ -1101,7 +1108,7 @@ section { padding: 110px 0; position: relative; }
   display: grid; place-items: center;
   flex-shrink: 0;
 }
-.method-icon.call { background: var(--sage-deep); color: var(--cream); }
+.method-icon.call { background: var(--call-blue); color: white; }
 .method-icon.wa { background: #25D366; color: white; }
 .method-icon svg { width: 22px; height: 22px; }
 .method-info { flex: 1; }
@@ -1228,6 +1235,36 @@ section { padding: 110px 0; position: relative; }
   line-height: 1.75;
   color: rgba(232, 220, 196, 0.65);
   max-width: 320px;
+  margin-bottom: 24px;
+}
+.footer-social {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+  border: 1px solid rgba(232, 220, 196, 0.18);
+  border-radius: 999px;
+  font-size: 13px;
+  color: rgba(232, 220, 196, 0.85) !important;
+  letter-spacing: 0.02em;
+  transition: all 0.3s;
+  background: linear-gradient(135deg, rgba(225, 48, 108, 0.08), rgba(245, 96, 64, 0.05));
+}
+.social-link:hover {
+  background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+  border-color: transparent;
+  color: white !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(253, 29, 29, 0.25);
+}
+.social-link svg {
+  width: 18px; height: 18px;
+  flex-shrink: 0;
 }
 .footer h4 {
   color: var(--cream);
@@ -1289,7 +1326,7 @@ section { padding: 110px 0; position: relative; }
   font-weight: 500;
   letter-spacing: 0.03em;
 }
-.mobile-cta .call { background: var(--sage-deep); color: var(--cream); }
+.mobile-cta .call { background: var(--call-blue); color: white; }
 .mobile-cta .wa { background: #25D366; color: white; }
 .mobile-cta svg { width: 18px; height: 18px; }
 
@@ -1547,7 +1584,7 @@ section { padding: 110px 0; position: relative; }
       </div>
     </div>
     <div class="services-grid">
-      <article class="service reveal">
+      <a href="tel:+905300975110" class="service reveal">
         <div class="service-media">
           <img src="images/malatya-masaj3.webp" alt="Klasik İsveç Masajı — Harmoniy Masaj Malatya" loading="lazy">
           <div class="service-icon">
@@ -1559,12 +1596,12 @@ section { padding: 110px 0; position: relative; }
           <p>Tüm vücudu yumuşak ve akıcı hareketlerle saran, kan dolaşımını canlandıran, yorgunluğa veda eden klasik Avrupa tekniği. Masaj dünyasının dilinde "merhaba".</p>
           <div class="service-meta">
             <span class="duration">60 / 90 dakika</span>
-            <span class="more">Detay <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            <span class="more"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg> Hemen Ara</span>
           </div>
         </div>
-      </article>
+      </a>
       
-      <article class="service reveal">
+      <a href="tel:+905300975110" class="service reveal">
         <div class="service-media">
           <img src="images/malatya-masaj4.jpg" alt="Medikal Masaj — boyun, sırt ve bel ağrılarına yönelik terapi" loading="lazy">
           <div class="service-icon">
@@ -1576,12 +1613,12 @@ section { padding: 110px 0; position: relative; }
           <p>Boyun, sırt ve bel ağrılarına yönelik; postür bozukluklarını destekleyen, kas-iskelet sistemine odaklanan terapötik yaklaşım. Şikayet bazlı uygulama.</p>
           <div class="service-meta">
             <span class="duration">45 / 60 dakika</span>
-            <span class="more">Detay <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            <span class="more"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg> Hemen Ara</span>
           </div>
         </div>
-      </article>
+      </a>
       
-      <article class="service reveal">
+      <a href="tel:+905300975110" class="service reveal">
         <div class="service-media">
           <img src="images/malatya-masaj5.jpg" alt="Aromaterapi Masajı — doğal uçucu yağlarla rahatlama" loading="lazy">
           <div class="service-icon">
@@ -1593,12 +1630,12 @@ section { padding: 110px 0; position: relative; }
           <p>Lavanta, okaliptus, gül, sandal ağacı... Doğal uçucu yağların dokunuşla buluştuğu, zihni dinginleştiren, ruhu hafifleten kişiye özel kompozisyon.</p>
           <div class="service-meta">
             <span class="duration">60 / 90 dakika</span>
-            <span class="more">Detay <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            <span class="more"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg> Hemen Ara</span>
           </div>
         </div>
-      </article>
+      </a>
       
-      <article class="service reveal">
+      <a href="tel:+905300975110" class="service reveal">
         <div class="service-media">
           <img src="images/malatya-masaj6.jpg" alt="Derin Doku Masajı — kronik gerginlik için odaklı baskı" loading="lazy">
           <div class="service-icon">
@@ -1610,12 +1647,12 @@ section { padding: 110px 0; position: relative; }
           <p>Kaslarda biriken kronik gerginliği yavaş ve odaklı baskıyla çözen güçlü teknik. Spor sonrası, uzun mesai sonrası, hayat sonrası ideal.</p>
           <div class="service-meta">
             <span class="duration">60 / 90 dakika</span>
-            <span class="more">Detay <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            <span class="more"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg> Hemen Ara</span>
           </div>
         </div>
-      </article>
+      </a>
       
-      <article class="service reveal">
+      <a href="tel:+905300975110" class="service reveal">
         <div class="service-media">
           <img src="images/malatya-masaj7.webp" alt="Bali Masajı — Endonezya geleneksel ritüeli" loading="lazy">
           <div class="service-icon">
@@ -1627,12 +1664,12 @@ section { padding: 110px 0; position: relative; }
           <p>Endonezya'nın geleneksel ritüelinden ilhamla; baskı, yoğurma ve esnetmenin uyumlu dansı. Egzotik bir kaçışın huzurunu Malatya'ya getirir.</p>
           <div class="service-meta">
             <span class="duration">75 / 90 dakika</span>
-            <span class="more">Detay <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            <span class="more"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg> Hemen Ara</span>
           </div>
         </div>
-      </article>
+      </a>
       
-      <article class="service reveal">
+      <a href="tel:+905300975110" class="service reveal">
         <div class="service-media">
           <img src="images/malatya-masaj1.jpg" alt="Sıcak Taş Masajı — volkanik bazalt taşlarıyla derin rahatlama" loading="lazy">
           <div class="service-icon">
@@ -1644,10 +1681,10 @@ section { padding: 110px 0; position: relative; }
           <p>Volkanik bazalt taşlarının ısısı, kasların derinine yayılarak gerginliği eritir. Kış günlerinin en sıcak hediyesi.</p>
           <div class="service-meta">
             <span class="duration">75 dakika</span>
-            <span class="more">Detay <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            <span class="more"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg> Hemen Ara</span>
           </div>
         </div>
-      </article>
+      </a>
     </div>
   </div>
 </section>
@@ -1999,6 +2036,16 @@ section { padding: 110px 0; position: relative; }
         <p>
           Malatya'nın Battalgazi ve Yeşilyurt bölgelerinde profesyonel masaj hizmeti. Sade tasarım, hijyenik ortam, uzman dokunuş.
         </p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/malatya.masaj.salonu" target="_blank" rel="noopener" aria-label="Instagram'da bizi takip edin" class="social-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+            </svg>
+            <span>@malatya.masaj.salonu</span>
+          </a>
+        </div>
       </div>
       
       <div>
@@ -2030,6 +2077,7 @@ section { padding: 110px 0; position: relative; }
         <ul>
           <li><a href="tel:+905300975110">📞 0530 097 51 10</a></li>
           <li><a href="https://wa.me/905300975110">💬 WhatsApp</a></li>
+          <li><a href="https://www.instagram.com/malatya.masaj.salonu" target="_blank" rel="noopener">📷 Instagram</a></li>
           <li>📍 Malatya, Türkiye</li>
           <li>🕒 Her gün 10:00 — 23:00</li>
           <li><a href="#hakkimizda">Hakkımızda</a></li>
